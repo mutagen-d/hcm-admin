@@ -3,7 +3,7 @@
         "target": "es2017",
         "module": "commonjs",
         "outDir": "dist",
-        "sourceMap": true,
+        "sourceMap": false,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "esModuleInterop": true,
@@ -18,7 +18,7 @@
     ],
     "include": [
         "src/**/*.ts",
-        "index.ts"
+        "src/index.ts"
     ],
     "exclude": [
         "./node_modules",

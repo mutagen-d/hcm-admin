@@ -1,13 +1,16 @@
 {
     "name": "hcm-admin",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "HCM Node SDK.",
     "main": "./dist/index.js",
     "scripts": {
+        "prepare": "npm run build",
+        "prebuild": "rimraf dist",
         "build": "tsc"
     },
+    "keywords": ["admin", "huawei", "push", "notification"],
     "config": {},
-    "author": "guoyu",
+    "author": "mutagen-d",
     "license": "ISC",
     "repository": {
         "type": "git",
@@ -18,11 +21,12 @@
         "request-promise": "^4.2.4"
     },
     "devDependencies": {
-        "typescript": "^4.0",
+        "@types/mocha": "^5.2.7",
         "@types/node": "^12",
         "@types/request": "^2.48.2",
         "@types/request-promise": "^4.1.44",
-        "@types/mocha": "^5.2.7",
-        "mocha": "5.2.0"
+        "mocha": "5.2.0",
+        "rimraf": "^5.0.7",
+        "typescript": "^4.0"
     }
 }

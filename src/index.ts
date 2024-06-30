@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-export * from "./src/hcm-namespace";
+export * from "./hcm-namespace";
