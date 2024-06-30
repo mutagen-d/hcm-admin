@@ -37,7 +37,7 @@ export class HcmNamespace {
         return token;
     }
 
-    public messaging(conf?: MessagingConfig): HcmServiceNamespace<Messaging> {
+    public messaging(conf?: MessagingConfig): Messaging {
         if (!this.checkInit()) {
             return;
         }
@@ -50,10 +50,10 @@ export class HcmNamespace {
         conf.messagingUrl = conf.messagingUrl ? conf.messagingUrl : this.config.pushUrl;
         let messaging = new Messaging(conf, this.authClient);
 
-        return { messaging };
+        return messaging;
     }
 
-    public topic(tconf?: TopicConfig): HcmServiceNamespace<Topic> {
+    public topic(tconf?: TopicConfig): Topic {
         if (!this.checkInit()) {
             return;
         }
@@ -63,10 +63,10 @@ export class HcmNamespace {
             };
         }
         tconf.devappid = tconf.devappid ? tconf.devappid : this.config.appId;
-        tconf.topicUrl = tconf.topicUrl ? tconf.topicUrl : this.config.pushUrl;
+        tconf.topicUrl = tconf.topicUrl ? tconf.topicUrl : this.config.topicUrl || this.config.pushUrl;
         let topic = new Topic(tconf, this.authClient);
 
-        return { topic };
+        return topic;
     }
 
     private checkInit() {
@@ -86,4 +86,5 @@ export interface HcmConfig {
     appSecret: string;
     authUrl?: string;
     pushUrl?: string
+    topicUrl?: string;
 }

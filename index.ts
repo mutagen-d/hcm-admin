@@ -14,9 +14,4 @@
  * limitations under the License.
  */
 
-import { HcmNamespace } from "./src/hcm-namespace";
-
-const hcmAdmin = new HcmNamespace();
-(hcmAdmin as any).default = hcmAdmin;
-
-export = hcmAdmin;
+export * from "./src/hcm-namespace";

@@ -17,7 +17,7 @@
 export interface ApnsConfig {
     headers?: {[key: string]: string};
     payload: ApnsPayload;
-    hms_options: ApnsOptions;
+    hms_options?: ApnsOptions;
 }
 
 export interface ApnsOptions {
@@ -26,8 +26,8 @@ export interface ApnsOptions {
 
 export interface ApnsPayload {
     aps: Aps;
-    acme_account: string;
-    acme_message: string;
+    acme_account?: string;
+    acme_message?: string;
   }
 
   export interface Aps {

@@ -55,8 +55,9 @@ export interface AndroidNotification {
     multi_lang_key?: MultiLanguageKey;
     channel_id?: string;
     notify_summary?: string;
+    big_picture?: string;
     image?: string;
-    style: number;
+    style?: number;
     big_title?: string;
     big_body?: string;
     auto_clear?: number;
