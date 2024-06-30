@@ -1,6 +1,6 @@
 {
     "name": "hcm-admin",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "HCM Node SDK.",
     "main": "./dist/index.js",
     "scripts": {
