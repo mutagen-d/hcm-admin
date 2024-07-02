@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { HttpClient, HttpRequestConfig, HttpMethod } from "../utils/api-request";
+import { HttpClient, HttpRequestConfig, HttpMethod, RetryConfig } from "../utils/api-request";
 import { HcmConfig } from "../hcm-namespace";
 const REFRESH_TOKEN_METHOD: HttpMethod = "POST";
 const ENDPOINT = "https://logintestlf.hwcloudtest.cn/oauth2/token";
@@ -24,7 +24,7 @@ export class AuthClient {
     private config: HcmConfig;
     private _token: string;
     constructor(conf: HcmConfig) {
-        this._httpClient = new HttpClient();
+        this._httpClient = new HttpClient(conf.retryConfig);
         this.config = conf;
     }
 

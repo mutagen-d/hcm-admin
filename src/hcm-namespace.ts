@@ -19,6 +19,7 @@ import { Topic } from "./push/topic";
 import { MessagingConfig } from "./push/modle/message";
 import { TopicConfig } from "./push/modle/topic";
 import { AuthClient } from "./auth/auth";
+import { RetryConfig } from "./utils/api-request";
 
 export class HcmNamespace {
     private authClient: AuthClient;
@@ -87,4 +88,5 @@ export interface HcmConfig {
     authUrl?: string;
     pushUrl?: string
     topicUrl?: string;
+    retryConfig?: RetryConfig;
 }
