@@ -48,6 +48,7 @@ export class AuthClient {
             client_id: this.config.appId
         };
         option.method = REFRESH_TOKEN_METHOD;
+        option.timeout = this.config.authTimeout;
         option.json = true;
         return this._httpClient.sendWithRetry(option).then(res => {
             this._token = res.data.access_token;

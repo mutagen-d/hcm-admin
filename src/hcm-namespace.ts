@@ -49,6 +49,7 @@ export class HcmNamespace {
         }
         conf.devappid = conf.devappid ? conf.devappid : this.config.appId;
         conf.messagingUrl = conf.messagingUrl ? conf.messagingUrl : this.config.pushUrl;
+        conf.messagingTimeout = typeof conf.messagingTimeout === 'number' ? conf.messagingTimeout : this.config.messagingTimeout;
         let messaging = new Messaging(conf, this.authClient);
 
         return messaging;
@@ -89,4 +90,6 @@ export interface HcmConfig {
     pushUrl?: string
     topicUrl?: string;
     retryConfig?: RetryConfig;
+    authTimeout?: number;
+    messagingTimeout?: number;
 }

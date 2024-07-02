@@ -62,7 +62,9 @@ export class Messaging {
         option.body = req;
         option.method = SEND_METHOD;
         option.json = true;
-        option.timeout = 10 * 1000;
+        if (typeof this.config.messagingTimeout === 'number') {
+          option.timeout = this.config.messagingTimeout;
+        }
         if (dryRun) {
             return this._httpClient.sendWithRetry(option).then(res => {
                 let data = res.data;

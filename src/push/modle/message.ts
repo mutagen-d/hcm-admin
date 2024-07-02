@@ -22,6 +22,7 @@ export interface MessagingConfig {
     devappid: string;
     messagingUrl?: string;
     retryConfig?: RetryConfig;
+    messagingTimeout?: number;
 }
 
 export interface MsgRequest {
