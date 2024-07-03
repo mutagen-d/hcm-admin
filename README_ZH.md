@@ -1,5 +1,6 @@
-# 华为推送服务服务端Node.js示例代码
+# 华为推送服务服务端Node.js
 [English](README.md) | 中文
+HMS Core推送套件（Node.js）
 
 ## 目录
 

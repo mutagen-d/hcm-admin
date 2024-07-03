@@ -1,4 +1,4 @@
-# HMS Core Push Kit Sample Code (Node.js)
+# HMS Core Push Kit (Node.js)
 English | [中文](README_ZH.md)
 ## Contents
 
